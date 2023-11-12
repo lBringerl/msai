@@ -7,8 +7,7 @@ INF = 10001
 def LIS(seq):
     d = [-1] + [INF] * len(seq)
     for x in seq:
-        l = bisect_left(d, x)
-        d[l] = x
+        d[bisect_left(d, x)] = x
     return bisect_left(d, INF) - 1
 
 
