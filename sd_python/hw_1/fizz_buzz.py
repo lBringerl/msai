@@ -8,7 +8,6 @@ def get_fizz_buzz(num):
         return 'Fizz'
     return num
 
-
 def fizz_buzz(n):
     inc = 1 if n > 1 else -1
     for i in range(1, n, inc):
