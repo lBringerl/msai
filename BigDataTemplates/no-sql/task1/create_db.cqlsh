@@ -1,0 +1,33 @@
+DROP KEYSPACE miptstudent2024_07;
+
+CREATE KEYSPACE miptstudent2024_07 WITH replication = {'class': 'SimpleStrategy', 'replication_factor': 2};
+
+USE miptstudent2024_07;
+
+DROP TABLE dist_avg;
+CREATE TABLE dist_avg (write_timestamp text,
+                       killed_by text,
+                       time int,
+                       distance float,
+                       PRIMARY KEY ((write_timestamp, killed_by), time));
+
+DROP TABLE dist_max;
+CREATE TABLE dist_max (write_timestamp text,
+                       killed_by text,
+                       time int,
+                       distance float,
+                       PRIMARY KEY ((write_timestamp, killed_by), time));
+
+DROP TABLE placement_diff_avg;
+CREATE TABLE placement_diff_avg (write_timestamp text,
+                                 killed_by text,
+                                 time int,
+                                 placement_diff float,
+                                 PRIMARY KEY ((write_timestamp, killed_by), time));
+
+DROP TABLE map_kills_all;
+CREATE TABLE map_kills_all (killed_by text,
+                            time int,
+                            map text,
+                            kills_count int,
+                            PRIMARY KEY ((killed_by, map), time));

@@ -1,0 +1,1 @@
+CREATE DATABASE ${hiveconf:name} LOCATION '${hiveconf:location}';
