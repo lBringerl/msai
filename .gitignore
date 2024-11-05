@@ -2,3 +2,5 @@ venv312/
 .idea/
 *.pyc
 .ipynb_checkpoints/
+*.npy
+.DS_Store
