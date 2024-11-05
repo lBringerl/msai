@@ -3,4 +3,4 @@ venv312/
 *.pyc
 .ipynb_checkpoints/
 *.npy
-.DS_Store
+*.DS_Store
